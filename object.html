@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+     let obj = {
+        movie1 : "hanuman",
+        movie2 : "kgf",
+        tickets : (x)=>{
+            console.log(this.movie1);
+        }
+    }
+    obj.tickets();
+   </script>
+</body>
+</html>

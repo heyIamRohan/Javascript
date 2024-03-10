@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function one() {
+            return new Promise((resolve,reject)=>{
+                setTimeout(() =>{
+                    resolve(300)
+                },20000)
+
+            })
+        }
+        async function two(){
+            console.log("Data Accessing");
+            console.log("Data Processing");
+            let a = await one()
+            console.log(a);
+
+            console.log("Data Accessing Done");
+            console.log("Data Processing Done");
+        }
+        two()
+
+        let obj = {
+            user:"abc",
+            contact : {
+                p : "one"
+            }
+        }
+    </script>
+</body>
+</html>

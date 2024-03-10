@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <label for="username" >Username</label>
+    <input type="text" class="user"><br>
+    <label for="password">Password</label>
+    <input type="text" class="pwd"><br>
+    <label for="email">Email</label>
+    <input type="text" class="mail"><br>
+    <button class="submit">Submit</button>
+    <button class="cancel">Cancel</button>
+    </div>
+    <div class="div"></div>
+    <script>
+        let submit = document.querySelector(".submit")
+        submit.addEventListener('click',()=>{
+        let user =  document.querySelector('.user').value
+        let pwd = document.querySelector('.pwd').value
+        let mail = document.querySelector('.mail').value
+        
+        let table = `        <table border = "1">
+            <tr>
+                <td>Username</td>
+                <td>${user}</td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>${pwd}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>${mail}</td>
+            </tr>
+        </table>`
+        document.querySelector(".div").innerHTML = table;
+        })
+    </script>
+</body>
+</html>
